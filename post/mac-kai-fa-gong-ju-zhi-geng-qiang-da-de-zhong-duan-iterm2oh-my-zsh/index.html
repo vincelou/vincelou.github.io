@@ -1,24 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://kanggggg.github.io</id>
-    <title>Kanggggg</title>
-    <updated>2019-09-19T06:01:33.519Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://kanggggg.github.io"/>
-    <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
-    <subtitle>Hello world</subtitle>
-    <logo>https://kanggggg.github.io/images/avatar.png</logo>
-    <icon>https://kanggggg.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Kanggggg</rights>
-    <entry>
-        <title type="html"><![CDATA[Mac开发工具之更强大的终端 iTerm2+Oh My Zsh]]></title>
-        <id>https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh</id>
-        <link href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
-        </link>
-        <updated>2019-09-19T05:41:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Mac开发工具之更强大的终端 iTerm2+Oh My Zsh | Kanggggg</title>
+<meta name="description" content="Hello world">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1568872873758">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kanggggg.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://kanggggg.github.io">
+        <img src="https://kanggggg.github.io/images/avatar.png?v=1568872873758" class="site-logo">
+        <h1 class="site-title">Kanggggg</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Hello world
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://kanggggg.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Mac开发工具之更强大的终端 iTerm2+Oh My Zsh</h2>
+            <div class="post-date">2019-09-19</div>
+            
+            <div class="post-content">
+              <p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
 <!-- more -->
 <h2 id="iterm2">iTerm2</h2>
 <p><a href="https://www.iterm2.com/index.html">iTerm2</a></p>
@@ -127,61 +205,55 @@ $ rm -rf fonts
 <p>修改iTerm2字体，<code>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text</code> ，把字体设成 <code>Meslo LG</code>，比如 <code>Meslo LG S for Powerline</code></p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mac疑难杂症之解决安全与隐私没有允许任何来源选项]]></title>
-        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang</id>
-        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
-        </link>
-        <updated>2019-09-19T05:28:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
-<!-- more -->
-<h2 id="解决办法">解决办法</h2>
-<ol>
-<li>
-<p>打开终端Terminal</p>
-</li>
-<li>
-<p>输入命令</p>
-<pre><code class="language-bash">$ sudo spctl --master-disable
-</code></pre>
-</li>
-<li>
-<p>如果没见效，重启就好</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mac疑难杂症之设置登录界面文字为中文]]></title>
-        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-she-zhi-deng-lu-jie-mian-wen-zi-wei-zhong-wen</id>
-        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-she-zhi-deng-lu-jie-mian-wen-zi-wei-zhong-wen">
-        </link>
-        <updated>2019-09-19T02:57:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>最近我的Mac电脑在每次更新之后，总是出现登录界面英文，登录之后又是中文的情况。虽然没有什么大问题，但作为一个强迫症患者，这是绝对不允许的，no way！！！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>最近我的Mac电脑在每次更新之后，总是出现登录界面英文，登录之后又是中文的情况。虽然没有什么大问题，但作为一个强迫症患者，这是绝对不允许的，no way！！！</p>
-<!-- more -->
-<h2 id="如何解决">如何解决</h2>
-<ol>
-<li>
-<p>打开终端</p>
-</li>
-<li>
-<p>输入命令</p>
-<pre><code class="language-bash">$ sudo languagesetup
-</code></pre>
-</li>
-<li>
-<p>按照屏幕提示输入密码，再输入语言代码</p>
-</li>
-<li>
-<p>重启</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://kanggggg.github.io/tag/2JjSY6zwu" class="tag">
+                    Mac
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
+                  <h3 class="post-title">
+                    Mac疑难杂症之解决安全与隐私没有允许任何来源选项
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
