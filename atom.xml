@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2019-09-19T04:54:09.662Z</updated>
+    <updated>2019-09-19T05:32:54.975Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://kanggggg.github.io/images/avatar.png</logo>
     <icon>https://kanggggg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Kanggggg</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac疑难杂症之解决安全与隐私没有允许任何来源选项]]></title>
+        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang</id>
+        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
+        </link>
+        <updated>2019-09-19T05:28:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
+<!-- more -->
+<h2 id="解决办法">解决办法</h2>
+<ol>
+<li>
+<p>打开终端Terminal</p>
+</li>
+<li>
+<p>输入命令</p>
+<pre><code class="language-bash">$ sudo spctl --master-disable
+</code></pre>
+</li>
+<li>
+<p>如果没见效，重启就好</p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mac疑难杂症之设置登录界面文字为中文]]></title>
         <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-she-zhi-deng-lu-jie-mian-wen-zi-wei-zhong-wen</id>
