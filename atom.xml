@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2019-09-19T06:03:49.406Z</updated>
+    <updated>2019-09-19T06:05:58.351Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -10,6 +10,56 @@
     <logo>https://kanggggg.github.io/images/avatar.png</logo>
     <icon>https://kanggggg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Kanggggg</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac开发环境之Ruby]]></title>
+        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby</id>
+        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby">
+        </link>
+        <updated>2019-09-19T06:04:46.000Z</updated>
+        <content type="html"><![CDATA[<p>Mac默认已经集成了Ruby环境，但是时间长了，难免版本过旧需要更新。</p>
+<h2 id="rvm">RVM</h2>
+<blockquote>
+<p>RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.</p>
+</blockquote>
+<p><a href="http://www.rvm.io/">RVM</a> 即 Ruby Version Manager，它是一套命令行工具，可用来方便地安装、管理、切换Ruby环境。</p>
+<ul>
+<li><a href="https://ruby-china.org/">Ruby China</a></li>
+</ul>
+<h3 id="安装rvm">安装RVM</h3>
+<pre><code class="language-bash"># 先安装RVM
+$ curl -L get.rvm.io | bash -s stable
+
+# 安装成功之后
+$ source ~/.bashrc  
+$ source ~/.bash_profile 
+
+# 查看RVM版本
+$ rvm -v
+</code></pre>
+<h3 id="基本使用">基本使用</h3>
+<pre><code class="language-bash"># 查看现有Ruby版本
+$ ruby -v
+
+# 列出可安装的版本
+$ rvm list known
+
+# 安装版本
+$ rvm install 2.3.0
+
+# 切换版本
+$ rvm use 2.3.0
+
+# 设置默认版本
+$ rvm use 2.3.0 --default
+
+# 列出已安装的版本
+$ rvm list
+
+# 删除版本
+$ rvm remove 2.3.0
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mac开发环境之Homebrew]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew</id>
