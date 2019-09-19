@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2019-09-19T04:46:15.018Z</updated>
+    <updated>2019-09-19T04:54:09.662Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>Hello world</subtitle>
     <logo>https://kanggggg.github.io/images/avatar.png</logo>
     <icon>https://kanggggg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Kanggggg</rights>
