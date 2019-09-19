@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Mac开发环境之Homebrew | Kanggggg</title>
+<title>iOS开发之CocoaPods：插件篇一 CocoaPods Packager | Kanggggg</title>
 <meta name="description" content="Hello world">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,39 +92,85 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Mac开发环境之Homebrew</h2>
+            <h2 class="post-title">iOS开发之CocoaPods：插件篇一 CocoaPods Packager</h2>
             <div class="post-date">2019-09-19</div>
             
             <div class="post-content">
-              <p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
-<!-- more -->
+              <p>经过我们的不懈努力，CocoaPods的私有库写完了，现在进入集成阶段了，倘若对方工程也在使用CocoaPods，我们也乐意开放源码，那就是开心愉快了，倘若对方工程还是个老古董，我们也不乐意开放源码，这时候就需要我们自行打包了。我们也知道打包又要考虑架构考虑真机和模拟器，很繁琐，CocoaPods Packager就可以来拯救我们。</p>
+<p><a href="https://guides.cocoapods.org/plugins/using-pods-for-closed-source-libs.html">Packaging Closed Source SDKs</a><br>
+<a href="https://github.com/CocoaPods/cocoapods-packager">CocoaPods Packager</a></p>
+<blockquote>
+<p>CocoaPods plugin which allows you to generate a framework or static library from a podspec.</p>
+<p>This plugin is for CocoaPods developers, who need to distribute their Pods not only via CocoaPods, but also as frameworks or static libraries for people who do not use Pods.</p>
+</blockquote>
 <h2 id="安装">安装</h2>
-<pre><code class="language-bash">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-</code></pre>
-<h2 id="基本使用">基本使用</h2>
-<pre><code class="language-bash">$ brew update # 更新Homebrew
-$ brew -v # 查看Homebrew版本
-$ brew help [COMMAND] # 查看帮助
+<p>打开终端，执行下面命令：</p>
+<pre><code class="language-bash">$ gem install cocoapods-packager
 
-# 包
-$ brew list # 查看已安装的包
-$ brew search &lt;packageName&gt; # 查询可用包
-$ brew install &lt;packageName&gt; # 安装包
-$ brew uninstall &lt;packageName&gt; # 卸载包
-$ brew upgrade &lt;packageName&gt; # 更新包
-$ brew info &lt;packageName&gt; # 查看包信息
+# 安装完成之后，验证一下，也可用来查看帮助
+$ pod package
 </code></pre>
-<p>以安装git为例：</p>
-<pre><code class="language-bash">$ brew search git # 查询
-$ brew install git # 安装
-$ brew uninstall git # 卸载
-$ brew upgrade git # 更新
+<h2 id="命令说明">命令说明</h2>
+<pre><code class="language-bash"># Overwrite existing files.
+# 是否覆盖已存在的文件
+--force 
+
+# Do not mangle symbols of depedendant Pods.
+--no-mangle
+
+# Generate embedded frameworks. 
+# 生成静态Framework
+--embedded
+
+# Generate static libraries.
+# 生成静态Library
+--library
+
+# Generate dynamic framework. 
+# 生成动态Framework
+--dynamic
+
+# Bundle identifier for dynamic framework
+# 动态Framework Bundle identifier
+--bundle-identifier 
+
+# Exclude symbols from dependencies.
+# 不包含依赖的符号表，动态库不能包含这个命令
+--exclude-deps 
+
+# Build the specified configuration (e.g. Debug). Defaults to Release
+# 生成的库是Debug还是Release，默认是Release。--configuration=Debug 
+--configuration
+
+# Only include the given subspecs
+# 只给指定的子库打包
+--subspecs
+
+# The sources to pull dependant pods from (defaults to https://github.com/CocoaPods/Specs.git)
+# 存在私有依赖
+--spec-sources=private,https://github.com/CocoaPods/Specs.git 
 </code></pre>
-<h2 id="注意">注意</h2>
+<h2 id="example">Example</h2>
+<pre><code class="language-bash">$ cd 工程目录
+$ pod package MyLib.podspec --force --embedded --no-mangle --exclude-deps --configuration=DEBUG
+</code></pre>
+<p>这边提供一个懒人方法，把命令写成Shell可执行文件放在目录下，就不用每次都敲命令了：</p>
 <ol>
 <li>
-<p>错误提示 <code>Error: The /usr/local directory is not writable</code></p>
-<pre><code class="language-bash">$ sudo chown -R $(whoami):admin /usr/local
+<p>新建 <code>package.sh</code> 文件放在跟podspec同目录下，输入：</p>
+<pre><code class="language-bash">#!/bin/bash
+pod package MyLib.podspec --force --embedded --no-mangle --exclude-deps --configuration=DEBUG
+</code></pre>
+</li>
+<li>
+<p>给予可执行权限</p>
+<pre><code class="language-bash">$ chmod u+x package.sh
+</code></pre>
+</li>
+<li>
+<p>执行</p>
+<pre><code class="language-bash">$ cd 项目目录
+$ ./package.sh
 </code></pre>
 </li>
 </ol>
@@ -133,12 +179,12 @@ $ brew upgrade git # 更新
             
               <div class="tag-container">
                 
-                  <a href="https://kanggggg.github.io/tag/M9v2_wH3p" class="tag">
-                    Homebrew
+                  <a href="https://kanggggg.github.io/tag/7PxhaBnP7" class="tag">
+                    iOS
                   </a>
                 
-                  <a href="https://kanggggg.github.io/tag/2JjSY6zwu" class="tag">
-                    Mac
+                  <a href="https://kanggggg.github.io/tag/Lf8MZ-jj-9" class="tag">
+                    CocoaPods
                   </a>
                 
               </div>
@@ -146,9 +192,9 @@ $ brew upgrade git # 更新
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
+                <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku">
                   <h3 class="post-title">
-                    Mac开发工具之更强大的终端 iTerm2+Oh My Zsh
+                     iOS开发之CocoaPods：进阶篇 搭建私有库
                   </h3>
                 </a>
               </div>
