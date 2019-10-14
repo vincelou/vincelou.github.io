@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2019-09-19T11:25:08.653Z</updated>
+    <updated>2019-10-14T08:26:16.008Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -130,9 +130,9 @@ $ ./package.sh
 <pre><code class="language-bash">$ cd ~/Desktop
 $ pod lib create MyUtils
 </code></pre>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388198669.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388198669.jpg" alt=""></figure>
 <p>项目目录如下：</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388489415.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388489415.jpg" alt=""></figure>
 <ul>
 <li>Example：Demo工程目录</li>
 <li>MyUtils：库代码目录</li>
@@ -141,16 +141,16 @@ $ pod lib create MyUtils
 <li>README.md：Readme</li>
 </ul>
 <p>双击 <strong>MyUtils.xcworkspace</strong> 打开工程，工程结构如下：</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481391868339.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481391868339.jpg" alt=""></figure>
 <p>接下来，我把这个工程放到了GitHub。</p>
 <h2 id="编写库代码">编写库代码</h2>
 <p>我这里就写一个测试类 <code>MUAppInfo</code>，写完之后再 <code>pod install</code> 进行开发模式下的导入</p>
 <p><strong>MUAppInfo.h</strong></p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397736154.jpg" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397736154.jpg" alt=""></figure>
 <p><strong>MUAppInfo.m</strong></p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397856966.jpg" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397856966.jpg" alt=""></figure>
 <p><strong>MUViewController.h</strong></p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481399293405.jpg" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481399293405.jpg" alt=""></figure>
 <h2 id="编辑podspec">编辑podspec</h2>
 <ul>
 <li><a href="https://guides.cocoapods.org/syntax/podspec.html#specification">Podspec Syntax Reference</a></li>
@@ -206,7 +206,7 @@ $ git push origin --tags # 推送到远程
 <p>添加成功之后，就能看到 <code>~/.cocoapods/repos/MySpecs</code> 多了 <code>MyUtils</code>，<code>MySpecs</code> 的远程仓库同步更新了。</p>
 <h3 id="测试工程导入私有库">测试工程导入私有库</h3>
 <p>这里拿出上面的 CocoaPodsDemo 这个工程进行测试，编辑Podfile ，编辑完成之后执行install</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481447599235.jpg" alt=""></p>
+<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481447599235.jpg" alt=""></figure>
 <p>这里的重点在要指定source：</p>
 <pre><code class="language-ruby"># 官方
 source 'https://github.com/CocoaPods/Specs.git'
@@ -337,22 +337,22 @@ $ sudo gem install -n /usr/local/bin cocoapods --pre
 $ pod init # 在工程目录下创建Podfile文件
 $ vi Podfile # 编辑
 </code></pre>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481240442711.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481240442711.jpg" alt=""></figure>
 <p>编辑Podfile，初始文件内容如下图。这里直接用的vi编辑器，不知如何使用的，请点<a href="http://www.runoob.com/linux/linux-vim.html">Linux vi/vim</a></p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481245106076.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481245106076.jpg" alt=""></figure>
 <h3 id="第二步-引入依赖">第二步 引入依赖</h3>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481237443868.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481237443868.jpg" alt=""></figure>
 <p>AFNetworking GitHub的这段话告诉我们，我们要想导入，要编辑Podfile，指定要导入它。但是这时候我们还不能直接编辑，因为我们要确定一下是否真的支持导入AFNetworking。</p>
 <pre><code class="language-bash">$ pod search AFNetworking
 </code></pre>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481263983217.jpg" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481263983217.jpg" alt=""></figure>
 <p>search的结果告诉我们，确实支持导入AFNetworking，当前的最新版是3.2.1，还有很多历史版本可以导入，AFNetworking里还有子库。现在可以来编辑Podfile：</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481249314614.jpg" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481249314614.jpg" alt=""></figure>
 <p>编辑完成之后，执行下面命令完成导入：</p>
 <pre><code class="language-bash">$ pod install
 </code></pre>
 <p>导入完成之后，Xcode打开工程的时候不再使用 <strong>CocoapodsDemo.xcodeeproj</strong>，使用 <strong>CocoaPods.xcworkspace</strong> 打开工程，此时的工程目录如下图：</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481250903053.jpg" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481250903053.jpg" alt=""></figure>
 <h2 id="podfile">Podfile</h2>
 <p><a href="https://guides.cocoapods.org/syntax/podfile.html">Podfile Syntax Reference</a></p>
 <blockquote>
@@ -360,15 +360,15 @@ $ vi Podfile # 编辑
 </blockquote>
 <p>Podfile是一个描述一个或多个Xcode项目的目标依赖项的规范，更直白的说就是指定项目要导入什么依赖，并指定一些导入设置。</p>
 <p>接下来简单分析一下CocoaPodsDemo这个工程里的Podfile：</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481258803893.jpg" alt=""></p>
+<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481258803893.jpg" alt=""></figure>
 <p>这里指定工程所支持的最低系统版本</p>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481259105045.jpg" alt=""></p>
+<figure data-type="image" tabindex="8"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481259105045.jpg" alt=""></figure>
 <p>这里指定是否以动态库的形式编译Pods</p>
 <ul>
 <li><code># use_frameworks</code> 是以Static Library的形式编译</li>
 <li><code>use_frameworks</code> 默认是以Dynamic Framework的形式编译</li>
 </ul>
-<p><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481260080281.jpg" alt=""></p>
+<figure data-type="image" tabindex="9"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481260080281.jpg" alt=""></figure>
 <p>这里指定要导入的依赖，这里的写法有很多种。</p>
 <pre><code class="language-ruby">pod 'AFNetworking'
 </code></pre>
@@ -691,16 +691,18 @@ $ rm -rf fonts
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac疑难杂症之解决安全与隐私没有允许任何来源选项]]></title>
+        <title type="html"><![CDATA[Mac疑难杂症之安装App时提示已损坏解决办法]]></title>
         <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang</id>
         <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
         </link>
         <updated>2019-09-19T05:28:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
+        <summary type="html"><![CDATA[<p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>目前最新的Mac OS下，每次打开一个从网上下载的应用，总会提示不安全，不能打开，解决办法是进到系统偏好设置 -&gt; 安全性与隐私里去打开。在老版本的Mac OS下的安全性与隐私里，允许从以下位置下载的应用设置成任何来源就不用每次去费时费力地每次去手动操作了，但是新版本已经没有这个选项了，我们要做的就是让这个选项出来。</p>
+        <content type="html"><![CDATA[<p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
 <!-- more -->
+<p>这个时候就需要进到 <em>系统偏好设置 -&gt; 安全性与隐私</em> 里设置允许从以下位置下载的App成任何来源。但是任何来源这个选项默认是被系统隐藏的。</p>
 <h2 id="解决办法">解决办法</h2>
+<h3 id="开启允许任何来源">开启允许任何来源</h3>
 <ol>
 <li>
 <p>打开终端Terminal</p>
@@ -714,6 +716,10 @@ $ rm -rf fonts
 <p>如果没见效，重启就好</p>
 </li>
 </ol>
+<h3 id="mac-catalina">Mac Catalina</h3>
+<p>MacOS Catalina 更新之后，哪怕把允许任何来源都开启了，还会提示App已损坏，这时候就需要再打开终端，执行下面的命令：</p>
+<pre><code class="language-bash">$ sudo xattr -d com.apple.quarantine /Applications/xxx.app
+</code></pre>
 ]]></content>
     </entry>
     <entry>
