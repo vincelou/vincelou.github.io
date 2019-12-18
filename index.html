@@ -1,338 +1,286 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta content="yes" name="apple-mobile-web-app-capable" />
-  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-  <meta name="referrer" content="never">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="kveln">
-  <title>Kanggggg</title>
-  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link href="https://kanggggg.github.io/media/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!--  <link href="https://kanggggg.github.io/media/css/all.min.css" rel="stylesheet" type="text/css"> -->
-  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="Kanggggg » Feed" href="https://kanggggg.github.io/atom.xml">
-  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
-  <link href="https://kanggggg.github.io/styles/main.css" rel="stylesheet">
-  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
-  <!-- <script src="https://kanggggg.github.io/media/scripts/jquery.min.js"></script> -->
-  <script>hljs.initHighlightingOnLoad();</script>
-  
+    <meta charset="utf-8" >
+
+<title>Kanggggg</title>
+<meta name="description" content="Hello world">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1576638623292">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kanggggg.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 
   </head>
   <body>
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="https://kanggggg.github.io">Kanggggg</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          
-          <li class="nav-item">
-              
-              <a class="nav-link" href="/">首页</a>
-              
-          </li>
-          
-          <li class="nav-item">
-              
-              <a class="nav-link" href="/archives">归档</a>
-              
-          </li>
-          
-          <li class="nav-item">
-              
-              <a class="nav-link" href="/tags">标签</a>
-              
-          </li>
-          
-          <li class="nav-item">
-              
-              <a class="nav-link" href="/post/about">关于</a>
-              
-          </li>
-          
-        </ul>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://kanggggg.github.io">
+        <img src="https://kanggggg.github.io/images/avatar.png?v=1576638623292" class="site-logo">
+        <h1 class="site-title">Kanggggg</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
       </div>
     </div>
-  </nav>
-  <header class="masthead" style="background-image: url('https://kanggggg.github.io/media/images/home-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Kanggggg</h1>
-            <span class="subheading">Hello world</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-      <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-       
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager">
-            <h2 class="post-title">
-              iOS开发之CocoaPods：插件篇一 CocoaPods Packager
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">3 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+    <div>
+      
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku">
-            <h2 class="post-title">
-               iOS开发之CocoaPods：进阶篇 搭建私有库
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">7 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+          <a href="/" class="site-nav">
+            首页
+          </a>
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku">
-            <h2 class="post-title">
-              iOS开发之CocoaPods：入门篇 管理依赖库
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">7 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+      
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm">
-            <h2 class="post-title">
-              Mac开发环境之NPM
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p><a href="https://www.npmjs.com">NPM</a> 即 Node Package Manager，是NodeJS的包管理器，且是随同NodeJS一起安装的。</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby">
-            <h2 class="post-title">
-              Mac开发环境之Ruby
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+      
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew">
-            <h2 class="post-title">
-              Mac开发环境之Homebrew
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
-            <h2 class="post-title">
-              Mac开发工具之更强大的终端 iTerm2+Oh My Zsh
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">4 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+      
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
-            <h2 class="post-title">
-              Mac疑难杂症之安装App时提示已损坏解决办法
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
         
-        <div class="post-preview">
-          <a href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-she-zhi-deng-lu-jie-mian-wen-zi-wei-zhong-wen">
-            <h2 class="post-title">
-              Mac疑难杂症之设置登录界面文字为中文
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>最近我的Mac电脑在每次更新之后，总是出现登录界面英文，登录之后又是中文的情况。虽然没有什么大问题，但作为一个强迫症患者，这是绝对不允许的，no way！！！</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-09-19</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        
-        
-      </div>
+      
     </div>
   </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Hello world
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://kanggggg.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
 
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager">
+                  <h2 class="post-title">iOS开发之CocoaPods：插件篇一 CocoaPods Packager</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku">
+                  <h2 class="post-title"> iOS开发之CocoaPods：进阶篇 搭建私有库</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku">
+                  <h2 class="post-title">iOS开发之CocoaPods：入门篇 管理依赖库</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm">
+                  <h2 class="post-title">Mac开发环境之NPM</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  <p><a href="https://www.npmjs.com">NPM</a> 即 Node Package Manager，是NodeJS的包管理器，且是随同NodeJS一起安装的。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm">
+                  <div class="feature-container" style="background-image: url('https://kanggggg.github.io/post-images/mac-kai-fa-huan-jing-zhi-npm.jpeg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby">
+                  <h2 class="post-title">Mac开发环境之Ruby</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew">
+                  <h2 class="post-title">Mac开发环境之Homebrew</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  <p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew">
+                  <div class="feature-container" style="background-image: url('https://kanggggg.github.io/post-images/mac-kai-fa-huan-jing-zhi-homebrew.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
+                  <h2 class="post-title">Mac开发工具之更强大的终端 iTerm2+Oh My Zsh</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  <p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
+                  <div class="feature-container" style="background-image: url('https://kanggggg.github.io/post-images/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
+                  <h2 class="post-title">Mac疑难杂症之安装App时提示已损坏解决办法</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  <p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
+                  <div class="feature-container" style="background-image: url('https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Catalina/macos-catalina-upgrade-hero.jpg')">
+                  </div>
+                </a>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-she-zhi-deng-lu-jie-mian-wen-zi-wei-zhong-wen">
+                  <h2 class="post-title">Mac疑难杂症之设置登录界面文字为中文</h2>
+                </a>
+                <div class="post-date">
+                  2019-09-19
+                </div>
+                <div class="post-abstract">
+                  <p>最近我的Mac电脑在每次更新之后，总是出现登录界面英文，登录之后又是中文的情况。虽然没有什么大问题，但作为一个强迫症患者，这是绝对不允许的，no way！！！</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
   
-    <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-              <li class="list-inline-item">
-              <a href="https://kanggggg.github.io/atom.xml" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-              </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy;<span>Kanggggg</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+  
+</div>
+
         </div>
       </div>
     </div>
-   </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="https://kanggggg.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
-  <!-- <script src="https://kanggggg.github.io/media/scripts/clean-blog.min.js"></script> -->
-  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
-<a id="back_to_top" href="#" class="back_to_top">
-  <span>▲</span></a>
-<script>$(document).ready((function(_this) {
-    return function() {
-      var bt;
-      bt = $('#back_to_top');
-      if ($(document).width() > 480) {
-        $(window).scroll(function() {
-          var st;
-          st = $(window).scrollTop();
-          if (st > 30) {
-            return bt.css('display', 'block')
-          } else {
-            return bt.css('display', 'none')
-          }
-        });
-        return bt.click(function() {
-          $('body,html').animate({
-            scrollTop: 0
-          },
-          800);
-          return false
-        })
-      }
-    }
-  })(this));</script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
