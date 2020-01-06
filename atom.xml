@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-01-06T11:33:04.976Z</updated>
+    <updated>2020-01-06T11:47:47.915Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -561,6 +561,21 @@ $ brew install git # 安装
 $ brew uninstall git # 卸载
 $ brew upgrade git # 更新
 </code></pre>
+<h2 id="一些好用的插件">一些好用的插件</h2>
+<ul>
+<li>快速预览增强
+<ul>
+<li>代码高亮：<code>brew cask install qlcolorcode</code></li>
+<li>查看无文件扩展名的纯文本文件：<code>brew cask install qlstephen</code></li>
+<li>Markdown文件预览：<code>brew cask install qlmarkdown</code></li>
+<li>查看 JSON 文件：<code>brew cask install quicklook-json</code></li>
+<li>预览CSV: <code>brew cask install quicklook-csv</code></li>
+<li>查看图片的分辨率及大小：<code>brew cask install qlimagesize</code></li>
+<li>查看 ZIP 压缩包文件：<code>brew cask install betterzip</code></li>
+</ul>
+</li>
+<li>Android文件传输：<code>brew cask install android-file-transfer</code></li>
+</ul>
 <h2 id="注意">注意</h2>
 <ol>
 <li>
