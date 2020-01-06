@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1576638623292">
+<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1578310356603">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kanggggg.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kanggggg.github.io">
-        <img src="https://kanggggg.github.io/images/avatar.png?v=1576638623292" class="site-logo">
+        <img src="https://kanggggg.github.io/images/avatar.png?v=1578310356603" class="site-logo">
         <h1 class="site-title">Kanggggg</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -130,9 +130,9 @@
 <pre><code class="language-bash">$ cd ~/Desktop
 $ pod lib create MyUtils
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388198669.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388198669.jpg" alt="" loading="lazy"></figure>
 <p>项目目录如下：</p>
-<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388489415.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481388489415.jpg" alt="" loading="lazy"></figure>
 <ul>
 <li>Example：Demo工程目录</li>
 <li>MyUtils：库代码目录</li>
@@ -141,16 +141,16 @@ $ pod lib create MyUtils
 <li>README.md：Readme</li>
 </ul>
 <p>双击 <strong>MyUtils.xcworkspace</strong> 打开工程，工程结构如下：</p>
-<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481391868339.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481391868339.jpg" alt="" loading="lazy"></figure>
 <p>接下来，我把这个工程放到了GitHub。</p>
 <h2 id="编写库代码">编写库代码</h2>
 <p>我这里就写一个测试类 <code>MUAppInfo</code>，写完之后再 <code>pod install</code> 进行开发模式下的导入</p>
 <p><strong>MUAppInfo.h</strong></p>
-<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397736154.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397736154.jpg" alt="" loading="lazy"></figure>
 <p><strong>MUAppInfo.m</strong></p>
-<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397856966.jpg" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481397856966.jpg" alt="" loading="lazy"></figure>
 <p><strong>MUViewController.h</strong></p>
-<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481399293405.jpg" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481399293405.jpg" alt="" loading="lazy"></figure>
 <h2 id="编辑podspec">编辑podspec</h2>
 <ul>
 <li><a href="https://guides.cocoapods.org/syntax/podspec.html#specification">Podspec Syntax Reference</a></li>
@@ -206,7 +206,7 @@ $ git push origin --tags # 推送到远程
 <p>添加成功之后，就能看到 <code>~/.cocoapods/repos/MySpecs</code> 多了 <code>MyUtils</code>，<code>MySpecs</code> 的远程仓库同步更新了。</p>
 <h3 id="测试工程导入私有库">测试工程导入私有库</h3>
 <p>这里拿出上面的 CocoaPodsDemo 这个工程进行测试，编辑Podfile ，编辑完成之后执行install</p>
-<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481447599235.jpg" alt=""></figure>
+<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481447599235.jpg" alt="" loading="lazy"></figure>
 <p>这里的重点在要指定source：</p>
 <pre><code class="language-ruby"># 官方
 source 'https://github.com/CocoaPods/Specs.git'

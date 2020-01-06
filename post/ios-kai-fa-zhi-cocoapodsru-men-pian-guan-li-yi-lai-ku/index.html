@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1576638623292">
+<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1578310356603">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kanggggg.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://kanggggg.github.io">
-        <img src="https://kanggggg.github.io/images/avatar.png?v=1576638623292" class="site-logo">
+        <img src="https://kanggggg.github.io/images/avatar.png?v=1578310356603" class="site-logo">
         <h1 class="site-title">Kanggggg</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -171,22 +171,22 @@ $ sudo gem install -n /usr/local/bin cocoapods --pre
 $ pod init # 在工程目录下创建Podfile文件
 $ vi Podfile # 编辑
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481240442711.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481240442711.jpg" alt="" loading="lazy"></figure>
 <p>编辑Podfile，初始文件内容如下图。这里直接用的vi编辑器，不知如何使用的，请点<a href="http://www.runoob.com/linux/linux-vim.html">Linux vi/vim</a></p>
-<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481245106076.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481245106076.jpg" alt="" loading="lazy"></figure>
 <h3 id="第二步-引入依赖">第二步 引入依赖</h3>
-<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481237443868.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481237443868.jpg" alt="" loading="lazy"></figure>
 <p>AFNetworking GitHub的这段话告诉我们，我们要想导入，要编辑Podfile，指定要导入它。但是这时候我们还不能直接编辑，因为我们要确定一下是否真的支持导入AFNetworking。</p>
 <pre><code class="language-bash">$ pod search AFNetworking
 </code></pre>
-<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481263983217.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481263983217.jpg" alt="" loading="lazy"></figure>
 <p>search的结果告诉我们，确实支持导入AFNetworking，当前的最新版是3.2.1，还有很多历史版本可以导入，AFNetworking里还有子库。现在可以来编辑Podfile：</p>
-<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481249314614.jpg" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481249314614.jpg" alt="" loading="lazy"></figure>
 <p>编辑完成之后，执行下面命令完成导入：</p>
 <pre><code class="language-bash">$ pod install
 </code></pre>
 <p>导入完成之后，Xcode打开工程的时候不再使用 <strong>CocoapodsDemo.xcodeeproj</strong>，使用 <strong>CocoaPods.xcworkspace</strong> 打开工程，此时的工程目录如下图：</p>
-<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481250903053.jpg" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481250903053.jpg" alt="" loading="lazy"></figure>
 <h2 id="podfile">Podfile</h2>
 <p><a href="https://guides.cocoapods.org/syntax/podfile.html">Podfile Syntax Reference</a></p>
 <blockquote>
@@ -194,15 +194,15 @@ $ vi Podfile # 编辑
 </blockquote>
 <p>Podfile是一个描述一个或多个Xcode项目的目标依赖项的规范，更直白的说就是指定项目要导入什么依赖，并指定一些导入设置。</p>
 <p>接下来简单分析一下CocoaPodsDemo这个工程里的Podfile：</p>
-<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481258803893.jpg" alt=""></figure>
+<figure data-type="image" tabindex="7"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481258803893.jpg" alt="" loading="lazy"></figure>
 <p>这里指定工程所支持的最低系统版本</p>
-<figure data-type="image" tabindex="8"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481259105045.jpg" alt=""></figure>
+<figure data-type="image" tabindex="8"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481259105045.jpg" alt="" loading="lazy"></figure>
 <p>这里指定是否以动态库的形式编译Pods</p>
 <ul>
 <li><code># use_frameworks</code> 是以Static Library的形式编译</li>
 <li><code>use_frameworks</code> 默认是以Dynamic Framework的形式编译</li>
 </ul>
-<figure data-type="image" tabindex="9"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481260080281.jpg" alt=""></figure>
+<figure data-type="image" tabindex="9"><img src="https://myblog-image.oss-cn-shanghai.aliyuncs.com/15481260080281.jpg" alt="" loading="lazy"></figure>
 <p>这里指定要导入的依赖，这里的写法有很多种。</p>
 <pre><code class="language-ruby">pod 'AFNetworking'
 </code></pre>
