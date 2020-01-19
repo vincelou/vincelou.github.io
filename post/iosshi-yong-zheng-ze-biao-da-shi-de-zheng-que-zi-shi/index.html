@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>[iOS]使用正则表达式的正确姿势 | Kanggggg</title>
+<meta name="description" content="Hello world">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://kanggggg.github.io/favicon.ico?v=1579426950007">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kanggggg.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://kanggggg.github.io">
+        <img src="https://kanggggg.github.io/images/avatar.png?v=1579426950007" class="site-logo">
+        <h1 class="site-title">Kanggggg</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Hello world
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://kanggggg.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">[iOS]使用正则表达式的正确姿势</h2>
+            <div class="post-date">2020-01-19</div>
+            
+            <div class="post-content">
+              <p>在iOS开发过程中，正则的使用还是比较常见，用来判断用户名、手机号等的输入。当碰到这种需求的时候，部分开发的第一印象可能是使用 <code>NSPredicate</code> 的 <code>SELF MATCHES %@</code> 进行判断，但遗憾的是此方法并非万能，存在检查不出来的情况。其实苹果专门提供了 <code>NSRegularExpression</code> 这个类来做正则校验。</p>
+<!-- more -->
+<h2 id="初始化nsregularexpression">初始化NSRegularExpression</h2>
+<pre><code class="language-objectivec">/// 初始化NSRegularExpression，如果出错则会返回nil，并带有error
+/// @param pattern 正则表达式
+/// @param options 模式选项，一般设成 kNilOptions
+/// @parma error 错误
++ (nullable NSRegularExpression *)regularExpressionWithPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options error:(NSError **)error;
+</code></pre>
+<h3 id="关于nsregularexpressionoptions">关于NSRegularExpressionOptions</h3>
+<pre><code class="language-objectivec">typedef NS_OPTIONS(NSUInteger, NSRegularExpressionOptions) {
+   NSRegularExpressionCaseInsensitive             = 1 &lt;&lt; 0, //不区分字母大小写的模式
+   NSRegularExpressionAllowCommentsAndWhitespace  = 1 &lt;&lt; 1, //忽略掉正则表达式中的空格和#号之后的字符
+   NSRegularExpressionIgnoreMetacharacters        = 1 &lt;&lt; 2, //将正则表达式整体作为字符串处理
+   NSRegularExpressionDotMatchesLineSeparators    = 1 &lt;&lt; 3, //允许.匹配任何字符，包括换行符  
+   NSRegularExpressionAnchorsMatchLines           = 1 &lt;&lt; 4, //允许^和$符号匹配行的开头和结尾
+   NSRegularExpressionUseUnixLineSeparators       = 1 &lt;&lt; 5, //设置\n为唯一的行分隔符，否则所有的都有效。
+   NSRegularExpressionUseUnicodeWordBoundaries    = 1 &lt;&lt; 6 //使用Unicode TR#29标准作为词的边界，否则所有传统正则表达式的词边界都有效
+};
+</code></pre>
+<p>前面提到 options 一般设成 <code>kNilOptions</code>，它的效果就是区分大小写，严格校验。需要区分大小写的时候把options 设成 <code>NSRegularExpressionCaseInsensitive</code>，结果就是正则 <code>abc</code> 会匹配到 abc 也会匹配到 ABC。</p>
+<h2 id="匹配">匹配</h2>
+<h3 id="获取匹配的个数">获取匹配的个数</h3>
+<pre><code class="language-objectivec">NSString *regEx = @&quot;&lt;正则表达式&gt;&quot;;
+NSString *string = @&quot;&lt;待匹配的字符串&gt;&quot;;
+NSError *error;
+NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:regEx options:kNilOptions error:&amp;error];
+if (error) {
+    NSLog(@&quot;error = %@&quot;, error);
+}
+
+NSUInteger number = [regularExpression numberOfMatchesInString:string options:kNilOptions range:NSMakeRange(0, string.length)];
+NSLog(@&quot;匹配的个数 = %lu&quot;, (unsigned long)number);
+</code></pre>
+<h3 id="获取第一个匹配的结果">获取第一个匹配的结果</h3>
+<pre><code class="language-objectivec">NSString *regEx = @&quot;&lt;正则表达式&gt;&quot;;
+NSString *string = @&quot;&lt;待匹配的字符串&gt;&quot;;
+NSError *error;
+NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:regEx options:kNilOptions error:&amp;error];
+if (error) {
+    NSLog(@&quot;error = %@&quot;, error);
+}
+
+NSTextCheckingResult *firstMatch = [regularExpression firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
+if (firstMatch) {
+    // NSTextCheckingResult 的 range 属性即匹配的字符串的位置
+    NSString *matchedString = [string substringWithRange:firstMatch.range];
+    NSLog(@&quot;匹配的字符串 = %@&quot;, matchedString);       
+}
+</code></pre>
+<h3 id="获取所有匹配的结果">获取所有匹配的结果</h3>
+<pre><code class="language-objectivec">NSString *regEx = @&quot;&lt;正则表达式&gt;&quot;;
+NSString *string = @&quot;&lt;待匹配的字符串&gt;&quot;;
+NSError *error;
+NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:regEx options:kNilOptions error:&amp;error];
+if (error) {
+    NSLog(@&quot;error = %@&quot;, error);
+}
+
+NSArray *matchArray = [regularExpression matchesInString:string options:0 range:NSMakeRange(0, string.length)];
+for (NSTextCheckingResult *match in matchArray) {
+    NSString *matchedString = [string substringWithRange:match.range];
+    NSLog(@&quot;匹配的字符串 = %@&quot;, matchedString); 
+}
+</code></pre>
+<h3 id="替换匹配的字符串">替换匹配的字符串</h3>
+<pre><code class="language-objectivec">NSString *regEx = @&quot;&lt;正则表达式&gt;&quot;;
+NSString *string = @&quot;&lt;待匹配的字符串&gt;&quot;;
+NSString *replacingString = @&quot;&lt;替换的字符串&gt;&quot;;
+NSError *error;
+NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:regEx options:kNilOptions error:&amp;error];
+if (error) {
+    NSLog(@&quot;error = %@&quot;, error);
+}
+
+NSString *newString = [regularExpression stringByReplacingMatchesInString:string options:kNilOptions range:NSMakeRange(0, string.length) withTemplate:replacingString];
+NSLog(@&quot;替换后的字符串 = %@&quot;, newString); 
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://kanggggg.github.io/tag/blcGduvgh" class="tag">
+                    Objective-C
+                  </a>
+                
+                  <a href="https://kanggggg.github.io/tag/Zhv6rypAl" class="tag">
+                    正则
+                  </a>
+                
+                  <a href="https://kanggggg.github.io/tag/7PxhaBnP7" class="tag">
+                    iOS
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://kanggggg.github.io/post/ios-kai-fa-zhi-wkwebview-xia-js-alertconfirmprompt-shi-xiao-jie-jue-fang-an">
+                  <h3 class="post-title">
+                    [iOS]WKWebView下JS alert()/confirm()/prompt() 失效解决方案
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '26ec8fd67b5f0254c968',
+        clientSecret: 'be42fa4f587b34997566ffa2ec22f5d8e15b5d76',
+        repo: 'kanggggg.github.io',
+        owner: 'kanggggg',
+        admin: ['kanggggg'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
