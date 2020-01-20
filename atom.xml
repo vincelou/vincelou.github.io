@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-01-19T09:42:45.157Z</updated>
+    <updated>2020-01-20T02:48:21.068Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -603,7 +603,7 @@ $ gem --version
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac开发环境之NPM]]></title>
+        <title type="html"><![CDATA[[Mac]开发环境之NPM]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm</id>
         <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm">
         </link>
@@ -647,7 +647,7 @@ $ npm config set disturl https://npm.taobao.org/dist --global
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac开发环境之Ruby]]></title>
+        <title type="html"><![CDATA[[Mac]开发环境之Ruby]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby</id>
         <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby">
         </link>
@@ -697,7 +697,7 @@ $ rvm remove 2.3.0
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac开发环境之Homebrew]]></title>
+        <title type="html"><![CDATA[[Mac]开发环境之Homebrew]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew</id>
         <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew">
         </link>
@@ -756,7 +756,7 @@ $ brew upgrade git # 更新
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac开发工具之更强大的终端 iTerm2+Oh My Zsh]]></title>
+        <title type="html"><![CDATA[[Mac]开发工具之更强大的终端 iTerm2+Oh My Zsh]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh</id>
         <link href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
         </link>
@@ -875,7 +875,7 @@ $ rm -rf fonts
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Mac疑难杂症之安装App时提示已损坏解决办法]]></title>
+        <title type="html"><![CDATA[[Mac]疑难杂症之安装App时提示已损坏解决办法]]></title>
         <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang</id>
         <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
         </link>
