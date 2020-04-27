@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-04-10T08:24:04.143Z</updated>
+    <updated>2020-04-27T07:36:50.543Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Kanggggg</rights>
     <entry>
         <title type="html"><![CDATA[[iOS]使用正则表达式的正确姿势]]></title>
-        <id>https://kanggggg.github.io/post/iosshi-yong-zheng-ze-biao-da-shi-de-zheng-que-zi-shi</id>
-        <link href="https://kanggggg.github.io/post/iosshi-yong-zheng-ze-biao-da-shi-de-zheng-que-zi-shi">
+        <id>https://kanggggg.github.io/post/iosshi-yong-zheng-ze-biao-da-shi-de-zheng-que-zi-shi/</id>
+        <link href="https://kanggggg.github.io/post/iosshi-yong-zheng-ze-biao-da-shi-de-zheng-que-zi-shi/">
         </link>
         <updated>2020-01-19T09:30:13.000Z</updated>
         <summary type="html"><![CDATA[<p>在iOS开发过程中，正则的使用还是比较常见，用来判断用户名、手机号等的输入。当碰到这种需求的时候，部分开发的第一印象可能是使用 <code>NSPredicate</code> 的 <code>SELF MATCHES %@</code> 进行判断，但遗憾的是此方法并非万能，存在检查不出来的情况。其实苹果专门提供了 <code>NSRegularExpression</code> 这个类来做正则校验。</p>
@@ -100,8 +100,8 @@ NSLog(@&quot;替换后的字符串 = %@&quot;, newString);
     </entry>
     <entry>
         <title type="html"><![CDATA[[iOS]WKWebView下JS alert()/confirm()/prompt() 失效解决方案]]></title>
-        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-wkwebview-xia-js-alertconfirmprompt-shi-xiao-jie-jue-fang-an</id>
-        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-wkwebview-xia-js-alertconfirmprompt-shi-xiao-jie-jue-fang-an">
+        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-wkwebview-xia-js-alertconfirmprompt-shi-xiao-jie-jue-fang-an/</id>
+        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-wkwebview-xia-js-alertconfirmprompt-shi-xiao-jie-jue-fang-an/">
         </link>
         <updated>2020-01-17T10:33:39.000Z</updated>
         <summary type="html"><![CDATA[<p>由于苹果的安全机制，苹果拦截了JavaScript的alert()/confirm()/prompt()的弹出，需要实现 <code>WKUIDelegate</code> 的下面三个代理方法：</p>
@@ -165,8 +165,8 @@ NSLog(@&quot;替换后的字符串 = %@&quot;, newString);
     </entry>
     <entry>
         <title type="html"><![CDATA[[iOS]CocoaPods：插件篇一 CocoaPods Packager]]></title>
-        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager</id>
-        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager">
+        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager/</id>
+        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodscha-jian-pian-yi-cocoapods-packager/">
         </link>
         <updated>2019-09-19T06:10:06.000Z</updated>
         <summary type="html"><![CDATA[<p>经过我们的不懈努力，CocoaPods的私有库写完了，现在进入集成阶段了，倘若对方工程也在使用CocoaPods，我们也乐意开放源码，那就是开心愉快了，倘若对方工程还是个老古董，我们也不乐意开放源码，这时候就需要我们自行打包了。我们也知道打包又要考虑架构考虑真机和模拟器，很繁琐，CocoaPods Packager就可以来拯救我们。</p>
@@ -254,8 +254,8 @@ $ ./package.sh
     </entry>
     <entry>
         <title type="html"><![CDATA[[iOS]CocoaPods：进阶篇 搭建私有库]]></title>
-        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku</id>
-        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku">
+        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku/</id>
+        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsjin-jie-pian-da-jian-si-you-ku/">
         </link>
         <updated>2019-09-19T06:09:11.000Z</updated>
         <summary type="html"><![CDATA[<p>经过入门篇中的实操，我们现在已经安装好了CocoaPods，也知道怎么导入依赖库了， 现在开始向前进一步，利用CocoaPods搭建私有库。</p>
@@ -424,8 +424,8 @@ $ pod cache clean --all
     </entry>
     <entry>
         <title type="html"><![CDATA[[iOS]CocoaPods：入门篇 管理依赖库]]></title>
-        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku</id>
-        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku">
+        <id>https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku/</id>
+        <link href="https://kanggggg.github.io/post/ios-kai-fa-zhi-cocoapodsru-men-pian-guan-li-yi-lai-ku/">
         </link>
         <updated>2019-09-19T06:07:29.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -604,8 +604,8 @@ $ gem --version
     </entry>
     <entry>
         <title type="html"><![CDATA[[Mac]开发环境之NPM]]></title>
-        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm</id>
-        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm">
+        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm/</id>
+        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-npm/">
         </link>
         <updated>2019-09-19T06:06:13.000Z</updated>
         <summary type="html"><![CDATA[<p><a href="https://www.npmjs.com">NPM</a> 即 Node Package Manager，是NodeJS的包管理器，且是随同NodeJS一起安装的。</p>
@@ -648,8 +648,8 @@ $ npm config set disturl https://npm.taobao.org/dist --global
     </entry>
     <entry>
         <title type="html"><![CDATA[[Mac]开发环境之Ruby]]></title>
-        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby</id>
-        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby">
+        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby/</id>
+        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-ruby/">
         </link>
         <updated>2019-09-19T06:04:46.000Z</updated>
         <content type="html"><![CDATA[<p>Mac默认已经集成了Ruby环境，但是时间长了，难免版本过旧需要更新。</p>
@@ -698,8 +698,8 @@ $ rvm remove 2.3.0
     </entry>
     <entry>
         <title type="html"><![CDATA[[Mac]开发环境之Homebrew]]></title>
-        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew</id>
-        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew">
+        <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew/</id>
+        <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew/">
         </link>
         <updated>2019-09-19T06:02:57.000Z</updated>
         <summary type="html"><![CDATA[<p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
@@ -757,8 +757,8 @@ $ brew upgrade git # 更新
     </entry>
     <entry>
         <title type="html"><![CDATA[[Mac]开发工具之更强大的终端 iTerm2+Oh My Zsh]]></title>
-        <id>https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh</id>
-        <link href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh">
+        <id>https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh/</id>
+        <link href="https://kanggggg.github.io/post/mac-kai-fa-gong-ju-zhi-geng-qiang-da-de-zhong-duan-iterm2oh-my-zsh/">
         </link>
         <updated>2019-09-19T05:41:37.000Z</updated>
         <summary type="html"><![CDATA[<p>在开发过程中，难免要用到终端运行命令的情况，一般Mac自带能满足需求了，但是俗话说工欲善其事必先利其器，作为一个开发，没有理由拒绝把终端变得更强。iTerm2 搭配 Oh My Zsh 或许就是答案。</p>
@@ -876,8 +876,8 @@ $ rm -rf fonts
     </entry>
     <entry>
         <title type="html"><![CDATA[[Mac]疑难杂症之安装App时提示已损坏解决办法]]></title>
-        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang</id>
-        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang">
+        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang/</id>
+        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang/">
         </link>
         <updated>2019-09-19T05:28:42.000Z</updated>
         <summary type="html"><![CDATA[<p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
