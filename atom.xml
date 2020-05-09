@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-05-09T05:48:14.342Z</updated>
+    <updated>2020-05-09T05:49:53.958Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://kanggggg.github.io/images/avatar.png</logo>
     <icon>https://kanggggg.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Kanggggg</rights>
-    <entry>
-        <title type="html"><![CDATA[ultest]]></title>
-        <id>https://kanggggg.github.io/post/ultest/</id>
-        <link href="https://kanggggg.github.io/post/ultest/">
-        </link>
-        <updated>2020-05-09T05:47:35.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="universal-link-test">universal link test</h2>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[[iOS]使用正则表达式的正确姿势]]></title>
         <id>https://kanggggg.github.io/post/iosshi-yong-zheng-ze-biao-da-shi-de-zheng-que-zi-shi/</id>
@@ -881,6 +872,38 @@ $ rm -rf fonts
 <p>修改iTerm2字体，<code>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text</code> ，把字体设成 <code>Meslo LG</code>，比如 <code>Meslo LG S for Powerline</code></p>
 </li>
 </ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Mac]疑难杂症之安装App时提示已损坏解决办法]]></title>
+        <id>https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang/</id>
+        <link href="https://kanggggg.github.io/post/mac-yi-nan-za-zheng-zhi-jie-jue-an-quan-yu-yin-si-mei-you-yun-xu-ren-he-lai-yuan-xuan-xiang/">
+        </link>
+        <updated>2019-09-19T05:28:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>由于MacOS的安全机制，非AppStore下载的App在打开的时候有时会提示App已损坏，怎么办呢？</p>
+<!-- more -->
+<p>这个时候就需要进到 <em>系统偏好设置 -&gt; 安全性与隐私</em> 里设置允许从以下位置下载的App成任何来源。但是任何来源这个选项默认是被系统隐藏的。</p>
+<h2 id="解决办法">解决办法</h2>
+<h3 id="开启允许任何来源">开启允许任何来源</h3>
+<ol>
+<li>
+<p>打开终端Terminal</p>
+</li>
+<li>
+<p>输入命令</p>
+<pre><code class="language-bash">$ sudo spctl --master-disable
+</code></pre>
+</li>
+<li>
+<p>如果没见效，重启就好</p>
+</li>
+</ol>
+<h3 id="mac-catalina">Mac Catalina</h3>
+<p>MacOS Catalina 更新之后，哪怕把允许任何来源都开启了，还会提示App已损坏，这时候就需要再打开终端，执行下面的命令：</p>
+<pre><code class="language-bash">$ sudo xattr -d com.apple.quarantine /Applications/xxx.app
+</code></pre>
 ]]></content>
     </entry>
 </feed>
