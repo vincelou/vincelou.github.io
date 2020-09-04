@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-05-09T05:49:53.958Z</updated>
+    <updated>2020-09-04T10:53:00.332Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -708,6 +708,9 @@ $ rvm remove 2.3.0
 <!-- more -->
 <h2 id="安装">安装</h2>
 <pre><code class="language-bash">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+<h2 id="卸载">卸载</h2>
+<pre><code class="language-bash">$ /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)&quot;
 </code></pre>
 <h2 id="基本使用">基本使用</h2>
 <pre><code class="language-bash">$ brew update # 更新Homebrew
