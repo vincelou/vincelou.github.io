@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kanggggg.github.io</id>
     <title>Kanggggg</title>
-    <updated>2020-09-04T10:53:00.332Z</updated>
+    <updated>2020-09-04T11:01:32.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kanggggg.github.io"/>
     <link rel="self" href="https://kanggggg.github.io/atom.xml"/>
@@ -697,15 +697,16 @@ $ rvm remove 2.3.0
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[Mac]开发环境之Homebrew]]></title>
+        <title type="html"><![CDATA[打造Mac开发环境之Homebrew]]></title>
         <id>https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew/</id>
         <link href="https://kanggggg.github.io/post/mac-kai-fa-huan-jing-zhi-homebrew/">
         </link>
         <updated>2019-09-19T06:02:57.000Z</updated>
-        <summary type="html"><![CDATA[<p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
+        <summary type="html"><![CDATA[<p>使用Mac开发的时候，我们经常会在一些工具的安装说明里发现使用Homebrew安装，仅仅一句命令就把工具安装好了，简直🐂炸了，那么什么是Homebrew?</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
+        <content type="html"><![CDATA[<p>使用Mac开发的时候，我们经常会在一些工具的安装说明里发现使用Homebrew安装，仅仅一句命令就把工具安装好了，简直🐂炸了，那么什么是Homebrew?</p>
 <!-- more -->
+<p><a href="https://brew.sh/index_zh-cn.html">Homebrew</a> ，macOS缺失的软件包管理器。实际上手之后，你会发现真的是不可获缺的，能方便地帮助我们完成包的安装、更新、卸载等等。</p>
 <h2 id="安装">安装</h2>
 <pre><code class="language-bash">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 </code></pre>
